@@ -4,7 +4,12 @@
 @section('ChildContent')
     @include('layouts.partials.header')
     @yield('content')
-<footer></footer>
+    @hasSection('footerLinks')
+        <footer>
+            @yield('footerLinks')
+        </footer>
+    @endif
+
 @endsection
 
 
